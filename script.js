@@ -33,14 +33,22 @@ const stockProductos = [
     },
     {
       id: 5,
-      nombre: "Bloques",
+      nombre: "Laberinto",
       cantidad: 1,
-      desc: "Bloques didacticos de madera",
-      precio: 4200,
-      img: "img/bloques.jpg",
+      desc: "Laberinto prono",
+      precio: 7200,
+      img: "img/prono.jpg",
     },
     {
       id: 6,
+      nombre: "Bloques",
+      cantidad: 1,
+      desc: "Bloques didacticos de madera",
+      precio: 4300,
+      img: "img/bloques.jpg",
+    },
+    {
+      id: 7,
       nombre: "Camion",
       cantidad: 1,
       desc: "Camion de madera",
@@ -48,7 +56,7 @@ const stockProductos = [
       img: "img/camion.jpg",
     },
     {
-      id: 7,
+      id: 8,
       nombre: "Didactico",
       cantidad: 1,
       desc: "Juego didactico de madera",
@@ -56,7 +64,7 @@ const stockProductos = [
       img: "img/didactico.jpg",
     },
     {
-      id: 8,
+      id: 9,
       nombre: "Encastre",
       cantidad: 1,
       desc: "Juego de encastre en madera",
@@ -64,20 +72,12 @@ const stockProductos = [
       img: "img/encastre.jpg",
     },
     {
-      id: 9,
+      id: 10,
       nombre: "Gusanito",
       cantidad: 1,
       desc: "Gusanito de madera",
       precio: 6500,
       img: "img/gusanito.jpg",
-    },
-    {
-      id: 10,
-      nombre: "Laberinto",
-      cantidad: 1,
-      desc: "Laberinto juego didactico",
-      precio: 7200,
-      img: "img/laberinto.jpg",
     },
     {
       id: 11,
@@ -196,7 +196,7 @@ const stockProductos = [
     if (carrito.length === 0) {
       console.log("Nada")
       modalBody.innerHTML = `
-      <p class="text-center text-primary parrafo">¡No gregaste ningun producto!</p>
+      <p class="text-center text-primary parrafo">¡No agregaste ningun producto!</p>
       `
     } else {
       //console.log("Algo")
