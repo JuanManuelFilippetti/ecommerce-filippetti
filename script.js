@@ -103,11 +103,17 @@ const stockProductos = [
     activarFuncion.addEventListener("click", procesarPedido)
   }
   
+  if(formulario){
+    formulario.addEventListener('submit', enviarPedido)
+  }
   document.addEventListener("DOMContentLoaded", () => {
     carrito = JSON.parse(localStorage.getItem("carrito")) || []
-  
     mostrarCarrito()
+    
+    if(activarFuncion){
     document.querySelector("#activarFuncion").click(procesarPedido)
+    }
+
   })
   if(formulario){
     formulario.addEventListener('submit', enviarCompra)
@@ -246,7 +252,8 @@ const stockProductos = [
     )
   }
   
-   function enviarCompra(e){
+   //function enviarCompra(e){
+    function enviarPedido(e){
      e.preventDefault()
      const cliente = document.querySelector('#cliente').value
      const email = document.querySelector('#correo').value
@@ -254,7 +261,7 @@ const stockProductos = [
      if(email === '' || cliente == ''){
        Swal.fire({
          title: "¡Debes completar tu email y nombre!",
-         text: "Rellena el formulario",
+         text: "Completa el formulario",
          icon: "error",
          confirmButtonText: "Aceptar",
      })
